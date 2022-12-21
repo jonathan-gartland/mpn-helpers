@@ -1,4 +1,4 @@
-from src.qtfile import qt2kArray, qtArray, qtLEGIOArray
+from .qtfile import qt2kArray, qtArray, qtLEGIOArray
 
 class QTArray:
     def __init__(self):
@@ -12,11 +12,11 @@ def getQT2Kmpn(inPosLarge, inPosSmall):
     if not inPosLarge in range(0,50):
         print("value not valid, must be between 0->49 inclusive")
         return
-    
+
     elif not inPosSmall in range(0,49):
         print("value not valid, must be between 0->48 inclusive")
         return
-    else:    
+    else:
         return qt2kArray[inPosLarge*49 + inPosSmall]
 
 def getQTmpn(inPos):
@@ -30,9 +30,9 @@ def getQTLEGIOmpn(inPosSmall, inPosLarge):
     if not inPosLarge in range(0,7):
         print("value not valid, must be between 0->49 inclusive")
         return
-    
+
     elif not inPosSmall in range(0,91):
         print("value not valid, must be between 0->48 inclusive")
         return
-    else:    
+    else:
         return qtLEGIOArray[inPosSmall][inPosLarge]

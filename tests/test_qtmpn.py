@@ -1,6 +1,4 @@
-#from src import QTArrays
 from mpn_lookup import QTArrays
-# import pytest
 
 
 def test_qt51():
@@ -17,15 +15,6 @@ def test_qt51():
 
     assert QTArrays.getQTmpn('b') is None
 
-
-# @pytest.mark.xfail(raises=AssertionError)
-# def test_badInput():
-#     try:
-#         bad_result = QTArrays.getQTmpn(-1)
-#         print(bad_result)
-#     except Exception as e:
-#         print(e)
-#     pass
 
 def test_qt2k():
     # [59.3, 44.6, 77.2]
