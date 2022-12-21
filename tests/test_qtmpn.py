@@ -1,4 +1,5 @@
-from src import QTArrays
+#from src import QTArrays
+from mpn_lookup import QTArrays
 # import pytest
 
 
