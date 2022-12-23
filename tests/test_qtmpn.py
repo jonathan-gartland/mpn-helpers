@@ -28,9 +28,15 @@ def test_qt2k():
     # bad input
     assert QTArrays.getQT2Kmpn(-2, -10) is None
 
-    assert QTArrays.getQT2Kmpn('q','a') is None
-
 
 def test_legio():
     assert QTArrays.getQTLEGIOmpn(0, 0) == '<1'
-    pass
+
+    assert QTArrays.getQTLEGIOmpn(25, 3) == 44.4
+
+    assert QTArrays.getQTLEGIOmpn(90, 6) == '>2272.6'
+
+    assert QTArrays.getQTLEGIOmpn(-1, -1) is None
+
+    assert QTArrays.getQTLEGIOmpn(91, 10) is None
+
