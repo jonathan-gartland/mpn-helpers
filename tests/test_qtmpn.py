@@ -11,9 +11,10 @@ def test_qt51():
     # 30 45.3 31.5 65.6
     assert QTArrays.getQTmpn(30) == [45.3,31.5,65.6]
 
+    # bad input
     assert QTArrays.getQTmpn(-1) is None
-
     assert QTArrays.getQTmpn('b') is None
+    assert QTArrays.getQTmpn(52) is None
 
 
 def test_qt2k():
@@ -24,9 +25,10 @@ def test_qt2k():
     # ['&gt;2419.6', 1439.5, 'infinite']
     assert QTArrays.getQT2Kmpn(49, 48) == ['>2419.6', 1439.5, 'infinite']
 
+    # bad input
     assert QTArrays.getQT2Kmpn(-2, -10) is None
 
-    # assert QTArrays.getQT2Kmpn('q','a') == None
+    assert QTArrays.getQT2Kmpn('q','a') is None
 
 
 def test_legio():

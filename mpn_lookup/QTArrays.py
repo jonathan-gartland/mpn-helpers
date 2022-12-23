@@ -32,11 +32,11 @@ def getQTmpn(inPos):
 
 def getQTLEGIOmpn(inPosSmall, inPosLarge):
     if inPosLarge not in range(0,7):
-        print("value not valid, must be between 0->49 inclusive")
+        print("value not valid, must be between 0->6 inclusive")
         return
 
     elif inPosSmall not in range(0,91):
-        print("value not valid, must be between 0->48 inclusive")
+        print("value not valid, must be between 0->90 inclusive")
         return
     else:
         return qtLEGIOArray[inPosSmall][inPosLarge]
